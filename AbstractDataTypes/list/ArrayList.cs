@@ -42,7 +42,7 @@ public class ArrayList<T> : IList<T>
     public void RemoveAt(int index)
     {
         if (index < 0 || index >= _size) throw new ArgumentOutOfRangeException(nameof(index));
-        int move = _size - index - 1;
+        var move = _size - index - 1;
         if (move > 0)
             Array.Copy(_elements, index + 1, _elements, index, move);
         _elements[--_size] = default!;
@@ -50,7 +50,7 @@ public class ArrayList<T> : IList<T>
 
     public bool Remove(T element)
     {
-        int index = IndexOf(element);
+       var index = IndexOf(element);
         if (index < 0) return false;
         RemoveAt(index);
         return true;
@@ -67,7 +67,7 @@ public class ArrayList<T> : IList<T>
     private int IndexOf(T element)
     {
         var comparer = EqualityComparer<T>.Default;
-        for (int i = 0; i < _size; i++)
+        for (var i = 0; i < _size; i++)
             if (comparer.Equals(_elements[i], element)) return i;
         return -1;
     }
@@ -82,7 +82,7 @@ public class ArrayList<T> : IList<T>
     private void EnsureCapacity(int min)
     {
         if (_elements.Length >= min) return;
-        int newCapacity = _elements.Length == 0 ? DefaultCapacity : _elements.Length * 2;
+        var newCapacity = _elements.Length == 0 ? DefaultCapacity : _elements.Length * 2;
         if (newCapacity < min) newCapacity = min;
         Array.Resize(ref _elements, newCapacity);
     }
