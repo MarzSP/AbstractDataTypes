@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 
+// Implementation of the ADT ArrayList using a dynamic array with the IList<T> interface
 public class ArrayList<T> : IList<T>
 {
     private T[] _elements = new T[DefaultCapacity];
