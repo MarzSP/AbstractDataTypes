@@ -54,7 +54,7 @@ public class ListTests
     [Fact]
     public void LinkedList_Basics()
     {
-        var list = new LinkedList<int>();
+        var list = new AbstractDataTypes.list.LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Insert(1, 15);
