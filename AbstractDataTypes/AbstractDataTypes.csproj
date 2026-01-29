@@ -7,4 +7,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Graph\" />
+      <Folder Include="Hashing\" />
+      <Folder Include="Sorting\" />
+      <Folder Include="Tree\" />
+    </ItemGroup>
+
 </Project>
