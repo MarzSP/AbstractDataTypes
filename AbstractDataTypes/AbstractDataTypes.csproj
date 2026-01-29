@@ -10,7 +10,6 @@
     <ItemGroup>
       <Folder Include="Graph\" />
       <Folder Include="Hashing\" />
-      <Folder Include="Tree\" />
     </ItemGroup>
 
 </Project>
